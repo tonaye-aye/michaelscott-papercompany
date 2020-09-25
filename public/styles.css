@@ -298,6 +298,10 @@ footer {
   footer {
     display: none;
   }
+
+  .hide {
+    display: none;
+  }
 }
 /* Large screens */
 @media only screen and (min-width: 600px) {
