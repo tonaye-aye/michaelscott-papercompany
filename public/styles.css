@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
 :root {
   font-size: 16px;
   --text-primary: #fafafa;
@@ -49,9 +56,9 @@ header a {
   text-decoration: none;
   color: black;
   padding: 1.3rem 1.8rem;
-  border-radius: 0.3rem;
   transition: all var(--transition-speed) ease;
   background: rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sharp);
 }
 header a:hover {
   background: rgba(0, 0, 0, 0.3);
@@ -60,7 +67,9 @@ header a:hover {
 main {
   margin-left: 5rem;
   padding: 2rem;
-  min-height: 100vh;
+  height: 100vh;
+  /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   align-items: center;
 }
@@ -167,12 +176,10 @@ main#home article {
   grid-template-columns: 1fr;
   grid-row-gap: 1rem;
   box-shadow: var(--shadow-long);
-  border-radius: 0.3rem;
 }
 main#home article .quote {
   background: white;
   padding: 2rem;
-  border-radius: 0.3rem;
   box-shadow: var(--shadow-soft);
 }
 main#home article .quote h1 {
@@ -201,7 +208,6 @@ main#home article .links a {
   padding: 1.3rem 1.8rem;
   transition: all var(--transition-speed) ease;
   box-shadow: var(--shadow-sharp);
-  border-radius: 0.3rem;
 }
 main#home article .links a:last-child {
   margin-left: 1rem;
@@ -223,7 +229,6 @@ main.form form {
   margin: 0 auto;
   padding: 2.5rem;
   box-shadow: var(--shadow-sharp);
-  border-radius: 0.3rem;
   background: #eee;
 }
 main.form form h2 {
@@ -253,7 +258,6 @@ main.form form button {
   padding: 1.3rem 1.8rem;
   transition: all var(--transition-speed) ease;
   box-shadow: var(--shadow-sharp);
-  border-radius: 0.3rem;
   font-family: "Courier Prime", monospace;
   font-size: 16px;
 }
