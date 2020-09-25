@@ -3,11 +3,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRoutes");
 const generalRoutes = require("./routes/generalRoutes");
+const secureRoutes = require("./routes/secureRoutes");
 const cookieParser = require("cookie-parser");
-const { requireAuth, checkUser } = require("./middleware/authMiddleware");
+const { checkUser } = require("./middleware/authMiddleware");
 
 // Port
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // initialise app
 const app = express();
@@ -21,8 +22,10 @@ app.use(cookieParser());
 app.set("view engine", "ejs");
 
 // database connection
+// const dbURI =
+//   "mongodb+srv://tony:gunners1@cluster0.r3zoz.mongodb.net/node-auth";
 mongoose
-  .connect(process.env.DATABASE_URL, {
+  .connect(process.env.DATABASE_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
@@ -33,9 +36,9 @@ mongoose
 // routes
 app.get("*", checkUser);
 app.get("/", (req, res) => res.render("home"));
-app.get("/paper", requireAuth, (req, res) => res.render("paper"));
 app.use(authRoutes);
 app.use(generalRoutes);
+app.use(secureRoutes);
 
 // 404 page
 app.use((req, res) => {

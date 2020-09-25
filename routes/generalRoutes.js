@@ -2,11 +2,6 @@ const { Router } = require("express");
 
 const router = Router();
 
-router.get("/paper", (req, res) => {
-  res.render("template", {
-    heading: "Paper"
-  });
-});
 router.get("/reviews", (req, res) => {
   res.render("template", {
     heading: "reviews"
