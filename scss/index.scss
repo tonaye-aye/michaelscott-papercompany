@@ -47,7 +47,6 @@ header {
     transition: all var(--transition-speed) ease;
     background: rgba(0, 0, 0, 0.1);
     &:hover {
-      // color: var(--text-primary);
       background: rgba(0, 0, 0, 0.3);
     }
   }
@@ -189,7 +188,7 @@ main#home {
         background: white;
         padding: 1.3rem 1.8rem;
         transition: all var(--transition-speed) ease;
-        // box-shadow: var(--shadow-sharp);
+        box-shadow: var(--shadow-sharp);
         border-radius: 0.3rem;
         &:last-child {
           margin-left: 1rem;

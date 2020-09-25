@@ -192,6 +192,7 @@ main#home article .links a {
   background: white;
   padding: 1.3rem 1.8rem;
   transition: all var(--transition-speed) ease;
+  box-shadow: var(--shadow-sharp);
   border-radius: 0.3rem;
 }
 main#home article .links a:last-child {
