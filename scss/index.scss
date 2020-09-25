@@ -34,6 +34,7 @@ body {
 }
 
 header {
+  width: 100%;
   padding: 2rem 1rem 0 0;
   position: fixed;
   top: 0;
@@ -293,7 +294,7 @@ footer {
 
   main {
     margin: 0;
-    padding: 0;
+    padding: 1rem;
   }
 
   footer {
