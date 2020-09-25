@@ -42,7 +42,7 @@ app.use(secureRoutes);
 
 // 404 page
 app.use((req, res) => {
-  res.render("template", {
+  res.render("404", {
     heading: "404 Not found!"
   });
 });
