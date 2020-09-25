@@ -1,0 +1,30 @@
+<html lang="en">
+  <%- include('partials/head'); -%>
+  <body>
+    <%- include('partials/header'); -%> <%- include('partials/nav'); -%>
+
+    <main id="home">
+      <div class="container">
+        <article>
+          <%- include('partials/logo'); -%>
+          <div class="quote">
+            <h1>“I love inside jokes. I hope to be a part of one someday.”</h1>
+            <p>Micahel Scott <br />CEO Paper Company INC.</p>
+          </div>
+          <% if(!user) { %>
+          <div class="links">
+            <a href="/signup">
+              Sign up&nbsp;<ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+            <a href="/login">
+              Log in&nbsp;<ion-icon name="key-outline"></ion-icon>
+            </a>
+          </div>
+          <% } %>
+        </article>
+      </div>
+    </main>
+
+    <%- include('partials/footer'); -%>
+  </body>
+</html>
