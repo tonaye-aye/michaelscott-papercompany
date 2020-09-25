@@ -33,11 +33,17 @@ body {
 }
 
 header {
-  padding: 2rem 1rem 0 0;
+  padding: 1rem;
+  width: 100%;
   position: fixed;
   top: 0;
-  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: #aaa;
+}
+header img {
+  max-width: 40px;
 }
 header a {
   text-decoration: none;
