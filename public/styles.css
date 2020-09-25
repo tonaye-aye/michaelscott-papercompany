@@ -104,6 +104,7 @@ main .container {
   background: goldenrod;
   font-size: 1.1rem;
   width: 100%;
+  box-shadow: var(--shadow-soft);
 }
 .navbar .navbar-nav .logo:hover {
   filter: grayscale(0%) opacity(1);

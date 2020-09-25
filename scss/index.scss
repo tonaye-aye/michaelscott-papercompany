@@ -103,6 +103,7 @@ main .container {
       background: goldenrod;
       font-size: 1.1rem;
       width: 100%;
+      box-shadow: var(--shadow-soft);
       &:hover {
         filter: grayscale(0%) opacity(1);
         color: var(--text-secondary);
