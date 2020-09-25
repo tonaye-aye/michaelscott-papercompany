@@ -166,15 +166,15 @@ main#home article .quote {
   box-shadow: var(--shadow-soft);
 }
 main#home article .quote h1 {
-  font-size: 1.6rem;
+  font-size: min(1.6rem, 4vw);
   margin-bottom: 1rem;
 }
 main#home article .quote p {
   color: lightslategray;
   text-align: right;
   font-style: italic;
-  font-size: 1.3rem;
-  line-height: 1.5rem;
+  font-size: min(1.3rem, 3vw);
+  line-height: min(1.5rem, 4vw);
 }
 main#home article .links {
   display: flex;
@@ -290,6 +290,7 @@ footer {
 
   main {
     margin: 0;
+    padding: 0;
   }
 
   footer {
