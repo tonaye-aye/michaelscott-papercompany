@@ -4,7 +4,7 @@ const { requireAuth } = require("../middleware/authMiddleware");
 const router = Router();
 
 router.get("/paper", requireAuth, (req, res) => {
-  res.render("template", {
+  res.render("paper", {
     heading: "Paper"
   });
 });

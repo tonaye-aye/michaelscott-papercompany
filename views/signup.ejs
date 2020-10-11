@@ -1,19 +1,23 @@
 <html lang="en">
   <%- include('partials/head'); -%>
   <body>
-    <%- include('partials/header'); -%> <%- include('partials/nav'); -%>
+    <%- include('partials/nav'); -%>
 
     <main class="form">
       <form action="/signup">
         <h2>Sign up</h2>
 
-        <label for="email">Email</label>
-        <input type="text" name="email" required />
-        <div class="email error"></div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="text" name="email" required />
+          <div class="email error"></div>
+        </div>
 
-        <label for="password">Password</label>
-        <input type="password" name="password" required />
-        <div class="password error"></div>
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input type="password" name="password" required />
+          <div class="password error"></div>
+        </div>
 
         <button>
           Sign up&nbsp;<ion-icon name="arrow-forward-outline"></ion-icon>
